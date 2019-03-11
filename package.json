@@ -1,0 +1,25 @@
+{
+  "name": "hateoas-parser",
+  "version": "0.9.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "npm run test -- --coverage",
+    "test:badges": "npm run test:coverage  && jest-coverage-badges output \"./badges\""
+  },
+  "description": "Javascript parser for HATEOAS rest APIs",
+  "author": "Joel Poulin <joel.poulin@infocentric.ch>",
+  "contributors": [],
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^22.1.1",
+    "jest-coverage-badges": "^1.1.2"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json-summary"
+    ],
+    "testURL": "http://localhost/"
+  }
+}
