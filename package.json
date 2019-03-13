@@ -1,5 +1,5 @@
 {
-  "name": "hateoas-parser",
+  "name": "@infocentric/hateoas-parser",
   "version": "0.9.0",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,11 @@
     "test:badges": "npm run test:coverage  && jest-coverage-badges output \"./badges\""
   },
   "description": "Javascript parser for HATEOAS rest APIs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/infocentric/hateoas-parser.git"
+  },
   "author": "Joel Poulin <joel.poulin@infocentric.ch>",
-  "contributors": [],
   "license": "MIT",
   "devDependencies": {
     "jest": "^22.1.1",
