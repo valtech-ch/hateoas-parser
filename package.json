@@ -1,7 +1,8 @@
 {
   "name": "@infocentric/hateoas-parser",
-  "version": "0.9.1",
+  "version": "1.0.0",
   "main": "index.js",
+  "module": "index.js",
   "scripts": {
     "test": "jest",
     "test:coverage": "npm run test -- --coverage",
