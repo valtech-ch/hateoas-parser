@@ -219,7 +219,7 @@ const createArrayParser = ({ url = '', params = [] } = {}) => pipe(
  * @param {Object} result
  * @returns {Object}
  */
-const parseLinks = function (result) {
+export const parseLinks = function (result) {
   result = result || {}
   const indexArray = (result.index || result.links || [])
   return indexArray.reduce((acc, value) => {
@@ -228,7 +228,7 @@ const parseLinks = function (result) {
   }, {})
 }
 
-const parseUrl = function (url, params) {
+export const parseUrl = function (url, params) {
   params = params || {}
   let parser = Array.isArray(params) ? createArrayParser({url, params}) : createObjectParser({url, params})
 
@@ -259,7 +259,7 @@ const parseUrl = function (url, params) {
  * @param {String=} version
  * @returns {String}
  */
-const getEndpoint = function (index, rel, params, version) {
+export const getEndpoint = function (index, rel, params, version) {
   version = version || 'default'
   let url = index[rel]
   if (typeof url === 'object') {
@@ -275,7 +275,7 @@ const getEndpoint = function (index, rel, params, version) {
  * @param {String} rel
  * @returns {String}
  */
-const getCleanEndpoint = function (index, rel) {
+export const getCleanEndpoint = function (index, rel) {
   let url = index[rel] || ''
   let parser = createObjectParser({url})
 
@@ -286,7 +286,7 @@ const getCleanEndpoint = function (index, rel) {
   return parser.getUrl()
 }
 
-module.exports = {
+export default {
   parseLinks,
   parseUrl,
   getEndpoint,
